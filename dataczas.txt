@@ -1,0 +1,14 @@
+	echo time()."<br>";	//czas liczony od 01.01.1970
+	//echo mktime(19, 37, 00,4,2,2005)."<br>"; // od początku do -> 19:37:00 , 4 kwietnia 2005
+	echo date('Y-m-d  H:i:s')."<br>";
+
+	$dataczas = new DateTime();
+
+	echo $dataczas -> format('Y-m-d  H:i:s')."<br>".print_r($dataczas); // operator -> dzieki niej odstajemy sie do wlascowisci lub metodoy obiektu
+
+	$dzien=26;
+	$miesiac=7;
+	$rok=1875;
+	if(checkdate($miesiac,$dzien,$rok))
+		echo "<br>Poprawna data!";
+	else echo "<br>Niepoprawna data!";
